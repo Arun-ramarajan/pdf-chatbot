@@ -1,3 +1,21 @@
+import streamlit as st
+from PyPDF2 import PdfReader
+import streamlit as st
+import os
+import pdfplumber
+import re
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import Chroma
+from langchain.chat_models import ChatOpenAI
+from langchain.memory import ConversationBufferMemory
+from langchain.chains import ConversationalRetrievalChain
+from langchain.schema import Document
+import openai
+
+
+
+
+
 MODEL = "gpt-4o-mini"
 db_name = "vector_db"
 api_key = "openai api key"
